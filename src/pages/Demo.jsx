@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/Demo.css";
 
-const API_URL = "http://localhost:5000/api/ai/demo/heart";
+const API_URL = "https://backendfitness-6mp4.onrender.com/api/ai/demo/heart";
 
 export default function Demo() {
 
