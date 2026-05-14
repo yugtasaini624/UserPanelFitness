@@ -10,7 +10,8 @@
   justify-content: center;
   align-items: center;
 
-  z-index: 300;
+  z-index: 9999;
+  touch-action: auto;
 
   backdrop-filter: blur(6px);
 
@@ -139,17 +140,13 @@
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 600px) {
-  .modal {
-    width: 92%;
-    padding: 20px;
+  .modal-overlay {
+    touch-action: manipulation;
   }
 
-  .modal-actions {
-    flex-direction: column;
-  }
-
-  .cancel-btn,
-  .save-btn {
-    width: 100%;
+  .save-btn,
+  .cancel-btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 }
