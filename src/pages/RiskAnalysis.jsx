@@ -10,7 +10,7 @@ import RecommendationPanel from "../components/RecommendationsPanel";
 
 import "../styles/RiskAnalysis.css";
 
-const AI_BASE_URL = "http://localhost:5000/api/ai";
+const AI_BASE_URL = "https://backendfitness-6mp4.onrender.com/api/ai";
 
 const RiskAnalysis = () => {
   const [activeForm, setActiveForm] = useState(null);
