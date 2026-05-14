@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/health";
+const API = "https://backendfitness-6mp4.onrender.com/api/health";
 
 export const getHealthLogs = async () => {
   const token = localStorage.getItem("token");
