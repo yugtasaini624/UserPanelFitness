@@ -8,11 +8,6 @@ export default function SettingsPage() {
     email: ""
   });
 
-  const [password, setPassword] = useState({
-    newPassword: "",
-    confirmPassword: ""
-  });
-
   const [notifications, setNotifications] = useState({
     email: true,
     push: true
