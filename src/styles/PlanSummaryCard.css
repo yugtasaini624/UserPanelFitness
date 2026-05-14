@@ -1,0 +1,22 @@
+.plan-summary-card {
+  background: #f7f6fa;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+.plan-summary-card h3 {
+  color: #5c4d7d;
+  margin-bottom: 0.5rem;
+}
+
+.plan-summary-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.plan-summary-card li {
+  margin-bottom: 0.4rem;
+  color: #4a3f66;
+}

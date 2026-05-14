@@ -1,0 +1,20 @@
+.risk-trend-chart {
+  background: #f8f5ff; /* soft purple background */
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.risk-trend-chart h3 {
+  color: #6a0dad;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin: 40px 0;
+}

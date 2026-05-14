@@ -1,0 +1,28 @@
+.risk-breakdown-panel {
+  background: #faf9fc;
+  padding: 1.2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+.risk-breakdown-panel h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #5c4d7d;
+  margin-bottom: 0.6rem;
+}
+
+.risk-breakdown-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.risk-breakdown-panel li {
+  padding: 0.4rem 0.7rem;
+  margin-bottom: 0.4rem;
+  border-radius: 0.5rem;
+  background: #f2f1f6;
+  color: #4a3f66;
+  font-weight: 500;
+}

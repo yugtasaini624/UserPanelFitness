@@ -1,0 +1,190 @@
+.nf-page{
+
+height:98vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(135deg,#4c1d95,#6d28d9,#8b5cf6);
+
+font-family:"Inter",sans-serif;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+
+/* STARS BACKGROUND */
+
+.stars{
+
+position:absolute;
+
+width:100%;
+height:200%;
+
+background-image:radial-gradient(white 1px, transparent 1px);
+
+background-size:50px 50px;
+
+opacity:0.30;
+
+animation:starScroll 90s linear infinite;
+
+}
+
+@keyframes starScroll{
+
+from{transform:translateY(0)}
+to{transform:translateY(-800px)}
+
+}
+
+
+/* MAIN CONTAINER */
+
+.nf-container{
+
+text-align:center;
+
+color:white;
+
+max-width:850px;
+
+z-index:2;
+
+}
+
+
+/* BIG 404 */
+
+.nf-404{
+
+font-size:140px;
+
+font-weight:800;
+
+margin-bottom:10px;
+
+text-shadow:0 10px 50px rgba(0,0,0,0.5);
+
+animation:glow 3s ease-in-out infinite;
+
+}
+
+
+/* GLOW */
+
+@keyframes glow{
+
+0%{text-shadow:0 0 10px rgba(255,255,255,0.2)}
+50%{text-shadow:0 0 40px rgba(255,255,255,0.8)}
+100%{text-shadow:0 0 10px rgba(255,255,255,0.2)}
+
+}
+
+
+/* TITLE */
+
+.nf-title{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+}
+
+
+/* SUBTEXT */
+
+.nf-sub{
+
+font-size:16px;
+
+opacity:0.9;
+
+margin-bottom:40px;
+
+}
+
+
+/* ILLUSTRATIONS */
+
+.nf-illustrations{
+
+display:flex;
+align-items: center;
+justify-content:center;
+
+gap:60px;
+margin-bottom:50px;
+
+}
+
+
+/* ICONS */
+
+.icon{
+
+width:200px;
+
+animation:float 6s ease-in-out infinite;
+
+filter:drop-shadow(0 15px 30px rgba(0,0,0,0.4));
+
+transition:transform 0.3s;
+
+}
+
+
+/* PLANET */
+
+.planet{
+
+animation-duration:8s;
+
+}
+
+/* FLOAT */
+
+@keyframes float{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-25px)}
+100%{transform:translateY(0)}
+
+}
+
+
+/* BUTTON */
+
+.nf-btn{
+
+background:white;
+
+color:#6d28d9;
+
+padding:14px 35px;
+
+border-radius:12px;
+
+font-weight:600;
+
+text-decoration:none;
+
+font-size:16px;
+
+transition:0.3s;
+
+}
+
+.nf-btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+}

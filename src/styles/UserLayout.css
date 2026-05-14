@@ -1,0 +1,16 @@
+.user-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.user-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-content {
+  padding: 30px;
+  flex: 1;
+}

@@ -1,0 +1,208 @@
+/* ===== TABLE CONTAINER (SAAS UPGRADE) ===== */
+
+.table-container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  overflow-x: auto;
+
+  animation: fadeUp 0.5s ease;
+}
+
+/* ===== TABLE ===== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+
+  min-width: 600px; /* ensures horizontal scroll on mobile */
+}
+
+/* HEADER + ROWS */
+
+th, td {
+  padding: 12px 10px;
+  text-align: left;
+
+  border-bottom: 1px solid #f1f1f1;
+
+  font-size: 0.95rem;
+}
+
+th {
+  font-weight: 600;
+  color: #374151;
+
+  background: #fafafa;
+}
+
+/* ROW HOVER */
+
+tr {
+  transition: background 0.2s ease;
+}
+
+tr:hover {
+  background: #f8f7ff;
+}
+
+/* ===== BUTTON (DELETE) ===== */
+
+.buttons {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+
+  border: none;
+
+  padding: 7px 12px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 0.85rem;
+
+  transition: all 0.2s ease;
+
+  box-shadow: 0 6px 15px rgba(239, 68, 68, 0.25);
+}
+
+.buttons:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.35);
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .table-container {
+    padding: 15px;
+  }
+
+  th, td {
+    font-size: 0.85rem;
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    min-width: 520px;
+  }
+}
+/* ===== RESPONSIVE MODAL UPGRADE ===== */
+
+/* base improvement for safety on all screens */
+.modal {
+  box-sizing: border-box;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+
+  .modal {
+    width: 85%;
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .health-form input {
+    font-size: 0.9rem;
+    padding: 11px;
+  }
+
+  .modal-actions {
+    gap: 8px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+  .modal-overlay {
+    padding: 15px; /* prevents edge cutoff */
+    align-items: flex-end; /* feels like mobile sheet */
+  }
+
+  .modal {
+    width: 100%;
+    max-width: 100%;
+    max-height: 85vh;
+
+    padding: 18px;
+
+    border-radius: 16px 16px 0 0;
+
+    animation: slideUpMobile 0.25s ease;
+  }
+
+  .health-form {
+    gap: 10px;
+  }
+
+  .health-form input {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 400px) {
+
+  .modal {
+    padding: 16px;
+  }
+
+  .health-form input {
+    font-size: 0.85rem;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== MOBILE SHEET ANIMATION ===== */
+@keyframes slideUpMobile {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

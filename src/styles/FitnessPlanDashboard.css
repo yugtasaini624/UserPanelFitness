@@ -1,0 +1,123 @@
+.fitness-dashboard{
+max-width:1200px;
+margin:auto;
+padding:60px 30px;
+font-family:Inter,system-ui,sans-serif;
+}
+
+/* TITLE */
+
+.fitness-title{
+font-size:36px;
+font-weight:700;
+color:#2d1f49;
+margin-bottom:8px;
+}
+
+.fitness-subtitle{
+color:#6b6b7a;
+margin-bottom:40px;
+font-size:15px;
+}
+
+/* HEALTH FACTORS */
+
+.health-factors{
+background:#faf7ff;
+padding:24px;
+border-radius:16px;
+border:1px solid #efeaff;
+margin-bottom:40px;
+}
+
+.health-factors h2{
+color:#6b46c1;
+margin-bottom:10px;
+font-size:20px;
+}
+
+.health-factors ul{
+padding-left:18px;
+}
+
+.health-factors li{
+margin-bottom:6px;
+font-size:14px;
+color:#555;
+}
+
+/* GRID */
+
+.plan-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:26px;
+}
+
+/* CARD */
+
+.plan-card{
+background:white;
+padding:26px;
+border-radius:18px;
+border:1px solid #efeaff;
+transition:.25s;
+position:relative;
+
+box-shadow:
+0 8px 20px rgba(0,0,0,0.04);
+}
+
+.plan-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:#6b46c1;
+border-radius:18px 18px 0 0;
+}
+
+.plan-card:hover{
+transform:translateY(-6px);
+box-shadow:
+0 16px 35px rgba(107,70,193,0.18);
+}
+
+/* DAY */
+
+.plan-card h3{
+margin-bottom:12px;
+font-size:18px;
+font-weight:600;
+color:#6b46c1;
+}
+
+/* WORKOUT LIST */
+
+.workout-list{
+padding-left:18px;
+}
+
+.workout-list li{
+margin-bottom:8px;
+font-size:14px;
+color:#555;
+line-height:1.5;
+}
+
+/* EMPTY STATE */
+
+.fitness-empty{
+padding:90px;
+text-align:center;
+background:#faf7ff;
+border-radius:18px;
+border:1px solid #efeaff;
+}
+
+.fitness-empty h2{
+color:#6b46c1;
+margin-bottom:10px;
+}

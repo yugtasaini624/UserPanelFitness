@@ -1,0 +1,276 @@
+/* PAGE */
+
+.settings-page {
+  min-height: 100vh;
+  padding: 40px;
+
+  background: linear-gradient(135deg,#f8fafc,#eef2ff);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  gap: 30px;
+}
+
+/* TITLE */
+
+.settings-page h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4c1d95;
+}
+
+/* CARD */
+
+.settings-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 28px;
+
+  width: 80%;
+
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+
+  border: 1px solid #f1f5f9;
+
+  transition: 0.3s;
+}
+
+.settings-card:hover {
+  transform: translateY(-3px);
+}
+
+/* CARD TITLE */
+
+.settings-card h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+
+  color: #111827;
+}
+
+/* FORM GROUP */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+/* INPUT */
+
+.form-group input {
+  padding: 11px 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid #e5e7eb;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #7c3aed;
+  outline: none;
+
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+}
+
+/* BUTTON */
+
+.save-btns {
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(135deg,#6d28d9,#9333ea);
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.save-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(124,58,237,0.3);
+}
+
+/* TOGGLES */
+
+.toggle-group {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 14px;
+
+  font-size: 14px;
+
+  color: #374151;
+}
+
+/* MODERN SWITCH */
+
+.toggle-group input[type="checkbox"] {
+
+  appearance: none;
+
+  width: 42px;
+  height: 22px;
+
+  background: #d1d5db;
+
+  border-radius: 20px;
+
+  position: relative;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.toggle-group input[type="checkbox"]::before {
+
+  content: "";
+
+  width: 18px;
+  height: 18px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  top: 2px;
+  left: 2px;
+
+  transition: 0.3s;
+}
+
+.toggle-group input[type="checkbox"]:checked {
+  background: #7c3aed;
+}
+
+.toggle-group input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
+/* ================== RESPONSIVE FIX ONLY ================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  .settings-page {
+    padding: 25px;
+    gap: 20px;
+  }
+
+  .settings-card {
+    width: 95%;
+    padding: 24px;
+  }
+
+  .settings-page h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+  .settings-page {
+    padding: 18px;
+  }
+
+  .settings-card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .settings-page h1 {
+    font-size: 20px;
+  }
+
+  .settings-card h2 {
+    font-size: 16px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .save-btns {
+    width: 100%;
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  /* better spacing for toggles */
+  .toggle-group {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .toggle-group input[type="checkbox"] {
+    width: 38px;
+    height: 20px;
+  }
+
+  .toggle-group input[type="checkbox"]::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .toggle-group input[type="checkbox"]:checked::before {
+    transform: translateX(18px);
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+
+  .settings-card {
+    padding: 16px;
+  }
+
+  .settings-page h1 {
+    font-size: 18px;
+  }
+
+  .form-group input {
+    font-size: 12.5px;
+  }
+}

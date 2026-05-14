@@ -1,0 +1,129 @@
+/* ============================= */
+/* SIDEBAR BASE */
+/* ============================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;              /* hidden by default */
+
+  width: 260px;
+  min-width: 260px;          /* prevents flex shrink bug */
+  height: 100vh;
+
+  background: linear-gradient(180deg, #6d28d9, #4c1d95);
+  color: white;
+
+  padding: 30px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: left 0.3s ease;
+  z-index: 200;
+
+  overflow-y: auto;
+}
+
+/* When Open */
+.sidebar.active {
+  left: 0;
+}
+
+/* ============================= */
+/* OVERLAY */
+/* ============================= */
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 150;
+}
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.sidebar-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.sidebar-logo span {
+  color: #ddd6fe;
+}
+
+/* ============================= */
+/* MENU */
+/* ============================= */
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  text-decoration: none;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.sidebar-menu li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(3px);
+}
+
+.sidebar-menu li.active {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.sidebar-footer {
+  margin-top: 20px;
+}
+
+.vals{
+  text-decoration: none;
+  color: white;
+}
+.logout-btn {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-weight: 600;
+
+  background: white;
+  color: #6d28d9;
+
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #ede9fe;
+}

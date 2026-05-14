@@ -1,0 +1,398 @@
+/* ===== HOW IT WORKS SECTION ===== */
+.how {
+  background:
+    radial-gradient(circle at top left, #ede9fe 0%, transparent 30%),
+    linear-gradient(135deg, #f9f8ff, #ffffff);
+
+  padding: 120px 8%;
+  font-family: 'Inter', sans-serif;
+
+  overflow: hidden;
+  position: relative;
+}
+
+/* FLOATING BACKGROUND GLOW */
+.how::before,
+.how::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.how::before {
+  width: 300px;
+  height: 300px;
+
+  background: rgba(155, 93, 229, 0.12);
+
+  top: -120px;
+  left: -100px;
+
+  animation: floatOrb 10s ease-in-out infinite;
+}
+
+.how::after {
+  width: 260px;
+  height: 260px;
+
+  background: rgba(109, 40, 217, 0.10);
+
+  bottom: -100px;
+  right: -80px;
+
+  animation: floatOrb 14s ease-in-out infinite reverse;
+}
+
+.how-container {
+  max-width: 1300px;
+  margin: auto;
+  text-align: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== HEADER ===== */
+.how-header {
+  max-width: 650px;
+  margin: 0 auto 80px;
+
+  animation: fadeUp 1s ease forwards;
+}
+
+.how-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin-bottom: 16px;
+
+  animation: textReveal 1s ease forwards;
+}
+
+.how-header h2 span {
+  background: linear-gradient(135deg, #6d28d9, #9b5de5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  position: relative;
+}
+
+/* SHIMMER EFFECT */
+.how-header h2 span::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -40%;
+
+  width: 35%;
+  height: 100%;
+
+  background: rgba(255,255,255,0.4);
+
+  transform: skewX(-20deg);
+
+  animation: shimmer 4s infinite;
+}
+
+.how-header p {
+  font-size: 1.05rem;
+  color: #555f7a;
+  line-height: 1.8;
+
+  animation: fadeSoft 1s ease 0.3s forwards;
+  opacity: 0;
+}
+
+/* ===== STEPS GRID ===== */
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+/* ===== CARD ===== */
+.how-card {
+  background: rgba(255,255,255,0.82);
+
+  backdrop-filter: blur(12px);
+
+  padding: 55px 30px 40px;
+
+  border-radius: 22px;
+
+  text-align: left;
+  position: relative;
+
+  border: 1px solid rgba(109, 40, 217, 0.08);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.05);
+
+  overflow: visible;
+
+  opacity: 0;
+  animation: cardReveal 1s ease forwards;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border 0.4s ease;
+}
+
+/* STAGGER */
+.how-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.how-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.how-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.how-card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* HOVER EFFECT */
+.how-card:hover {
+  transform:
+    translateY(-12px)
+    rotate(-1deg);
+
+  box-shadow:
+    0 24px 50px rgba(109, 40, 217, 0.14);
+
+  border: 1px solid rgba(109, 40, 217, 0.16);
+}
+
+/* GLOW INSIDE CARD */
+.how-card::before {
+  content: "";
+  position: absolute;
+
+  top: -50px;
+  right: -50px;
+
+  width: 120px;
+  height: 120px;
+
+  background: rgba(155, 93, 229, 0.10);
+
+  border-radius: 50%;
+  filter: blur(30px);
+
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+/* ===== STEP NUMBER BADGE ===== */
+.step-number {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+
+  background:
+    linear-gradient(135deg, #6d28d9, #9b5de5);
+
+  border-radius: 50%;
+
+  height: 58px;
+  width: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+
+  top: -24px;
+  left: 24px;
+
+  z-index: 5;
+
+  border: 4px solid #fff;
+
+  box-shadow:
+    0 10px 25px rgba(109, 40, 217, 0.35);
+
+  animation: badgeBounce 3s ease-in-out infinite;
+}
+
+/* ===== TEXT CONTENT ===== */
+.how-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a2e;
+
+  margin-bottom: 10px;
+  margin-top: 12px;
+
+  transition: color 0.3s ease;
+}
+
+.how-card:hover h3 {
+  color: #6d28d9;
+}
+
+.how-card p {
+  font-size: 0.95rem;
+  color: #555f7a;
+  line-height: 1.7;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSoft {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    letter-spacing: -2px;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -40%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes badgeBounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+
+  .how-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .how {
+    padding: 100px 6%;
+  }
+
+  .how-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .how-header {
+    margin-bottom: 65px;
+  }
+
+  .how-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .how-header p {
+    font-size: 1rem;
+  }
+
+  .how-card {
+    padding: 55px 24px 32px;
+  }
+
+  .step-number {
+    height: 52px;
+    width: 52px;
+
+    font-size: 1.2rem;
+
+    left: 20px;
+  }
+
+  .how-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .how-card p {
+    font-size: 0.92rem;
+  }
+}

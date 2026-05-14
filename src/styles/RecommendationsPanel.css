@@ -1,0 +1,32 @@
+.recommendation-panel {
+  background: #fcfbfe;
+  padding: 1.2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.recommendation-panel h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #5c4d7d;
+}
+
+.recommendation-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendation-panel li {
+  margin-bottom: 0.4rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  background: #f2f1f6;
+  color: #4a3f66;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.recommendation-panel li:hover {
+  background: #e9e7f3;
+}

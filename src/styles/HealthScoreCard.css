@@ -1,0 +1,42 @@
+.health-score-card {
+  background: #f9f8fc;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+}
+
+.health-score-card h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #5c4d7d;
+  margin-bottom: 0.8rem;
+}
+
+.score {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #7c6f9a;
+  margin-bottom: 1rem;
+}
+
+.per-risk-breakdown h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5c4d7d;
+  margin-bottom: 0.5rem;
+}
+
+.per-risk-breakdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.per-risk-breakdown li {
+  margin-bottom: 0.5rem;
+  background: #f3f2f7;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  color: #4a3f66;
+  font-weight: 500;
+}
