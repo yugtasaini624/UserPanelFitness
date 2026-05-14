@@ -61,7 +61,7 @@ export default function AddHealthModal({ close, refresh }) {
 
           <div className="modal-actions">
             <button type="button" onClick={close} className="cancel-btn">Cancel</button>
-            <button type="submit" className="save-btn">Save</button>
+            <button type="submit" className="save-btn" onTouchEnd={() => {}} >Save</button>
           </div>
         </form>
       </div>
