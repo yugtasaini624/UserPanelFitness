@@ -5,7 +5,6 @@ import {
   HeartPulse,
   Dumbbell,
   Utensils,
-  Bell,
   Settings,
   LogOut,
 } from "lucide-react";
